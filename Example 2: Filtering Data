@@ -1,0 +1,11 @@
+Create a view showing products above average price:
+
+sql
+CREATE VIEW Products_Above_Average AS
+SELECT ProductName, Price
+FROM Products
+WHERE Price > (SELECT AVG(Price) FROM Products);
+Query the view:
+
+sql
+SELECT * FROM Products_Above_Average;
