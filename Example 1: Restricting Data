@@ -1,0 +1,11 @@
+Create a view containing only customers from Brazil:
+
+sql
+CREATE VIEW Brazil_Customers AS
+SELECT CustomerName, ContactName
+FROM Customers
+WHERE Country = 'Brazil';
+Query the view:
+
+sql
+SELECT * FROM Brazil_Customers;
