@@ -1,0 +1,11 @@
+Create a view joining Customers and Orders for an easy-to-query summary:
+
+sql
+CREATE VIEW order_details AS
+SELECT Customers.customer_id, Customers.first_name, Orders.amount
+FROM Customers
+JOIN Orders ON Customers.customer_id = Orders.customer_id;
+Query the combined results:
+
+sql
+SELECT * FROM order_details;
